@@ -1,6 +1,6 @@
 "use client";
 
-import { Check, Star } from "lucide-react";
+import { Check, Star, Camera } from "lucide-react";
 
 export default function Services() {
     return (
@@ -68,6 +68,29 @@ export default function Services() {
                         <button className="w-full py-3 bg-brand-gold text-brand-dark rounded-sm font-bold tracking-wider hover:bg-yellow-500 transition-all uppercase text-sm shadow-lg shadow-brand-gold/20">
                             Book The Full Experience
                         </button>
+                    </div>
+                </div>
+
+                {/* Photographer Add-on */}
+                <div className="max-w-4xl mx-auto mt-16 bg-gradient-to-r from-zinc-900 via-zinc-800 to-zinc-900 border border-white/10 rounded-xl p-8 flex flex-col md:flex-row items-center gap-8 relative overflow-hidden group">
+                    <div className="absolute inset-0 bg-brand-gold/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+                    <div className="bg-brand-dark p-4 rounded-full text-brand-gold border border-brand-gold/20 relative z-10 shrink-0">
+                        <Camera size={32} strokeWidth={1.5} />
+                    </div>
+
+                    <div className="text-center md:text-left flex-grow relative z-10">
+                        <h3 className="text-xl font-display font-bold text-white mb-2">Capture The Moment</h3>
+                        <p className="text-white/60 leading-relaxed">
+                            Don't stress about photos. We subcontract with top-tier local photographers to document your event.
+                            We can bundle this service into your quote for a seamless experience.
+                        </p>
+                    </div>
+
+                    <div className="relative z-10 shrink-0">
+                        <span className="inline-block px-6 py-2 border border-brand-gold/30 rounded-full text-brand-gold text-sm font-bold tracking-wider uppercase hover:bg-brand-gold hover:text-brand-dark transition-all cursor-default">
+                            Inquire For Pricing
+                        </span>
                     </div>
                 </div>
             </div>
