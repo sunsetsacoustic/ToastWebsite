@@ -1,54 +1,39 @@
 import React from 'react';
 
-export const ToastLogo = ({ className = "h-12 w-auto", color = "currentColor" }: { className?: string, color?: string }) => (
+export const ToastLogo = ({ className = "h-12 w-auto" }: { className?: string }) => (
     <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 400 150"
+        viewBox="0 0 300 130"
         fill="none"
         className={className}
-        aria-label="Toast Mobile Bar Co."
+        aria-label="TOAST Mobile Bar"
     >
-        {/* Letter T */}
-        <path d="M40 30 H 90" stroke={color} strokeWidth="8" strokeLinecap="square" />
-        <path d="M65 30 V 100" stroke={color} strokeWidth="8" strokeLinecap="square" />
+        {/* T */}
+        <path d="M10 20 H 50 M 30 20 V 80" stroke="#F5F5F5" strokeWidth="6" strokeLinecap="square" />
 
-        {/* Stylized 'O' (The Tilted Glass) */}
-        <g transform="translate(130, 65) rotate(15)">
-            {/* Bowl of glass */}
-            <path d="M-25 -25 Q 0 25 25 -25" stroke={color} strokeWidth="6" fill="none" />
-            {/* Liquid level */}
-            <path d="M-20 -10 Q 0 20 20 -10" fill={color} opacity="0.8" />
-            {/* Stem */}
-            <path d="M0 25 V 50" stroke={color} strokeWidth="4" />
-            {/* Base */}
-            <path d="M-15 50 H 15" stroke={color} strokeWidth="4" />
+        {/* O - Stylized Teardrop/Liquid Shape */}
+        <g transform="translate(85, 50)">
+            {/* Outer Teardrop Shape */}
+            <path d="M0 -35 C 20 -35, 35 -15, 35 10 C 35 30, 20 45, 0 45 C -20 45, -35 30, -35 10 C -35 -15, -20 -35, 0 -35"
+                stroke="#D4AF37" strokeWidth="5" fill="none" transform="rotate(-15)" />
+            {/* Liquid Fill Level */}
+            <path d="M-28 12 Q 0 25 28 8 C 30 25, 15 40, 0 40 C -15 40, -30 25, -28 12"
+                fill="#D4AF37" opacity="0.9" transform="rotate(-15)" />
             {/* Bubbles */}
-            <circle cx="15" cy="-35" r="3" fill={color} />
-            <circle cx="25" cy="-45" r="2" fill={color} />
+            <circle cx="10" cy="-15" r="3" fill="#D4AF37" />
+            <circle cx="20" cy="-25" r="2" fill="#D4AF37" />
         </g>
 
-        {/* Letter A */}
-        <path d="M200 100 L 225 30 L 250 100" stroke={color} strokeWidth="8" strokeLinecap="square" strokeLinejoin="round" />
-        <path d="M210 75 H 240" stroke={color} strokeWidth="7" />
+        {/* A */}
+        <path d="M140 80 L 160 20 L 180 80 M 150 60 H 170" stroke="#F5F5F5" strokeWidth="6" strokeLinecap="square" strokeLinejoin="round" />
 
-        {/* Letter S */}
-        <path d="M290 35 Q 260 35 260 55 Q 260 75 290 75 Q 320 75 320 95 Q 320 115 290 115" stroke={color} strokeWidth="8" fill="none" />
+        {/* S */}
+        <path d="M200 30 Q 180 30, 180 45 Q 180 60, 210 60 Q 240 60, 240 75 Q 240 90, 210 90" stroke="#F5F5F5" strokeWidth="6" fill="none" />
 
-        {/* Letter T */}
-        <path d="M330 30 H 380" stroke={color} strokeWidth="8" strokeLinecap="square" />
-        <path d="M355 30 V 100" stroke={color} strokeWidth="8" strokeLinecap="square" />
+        {/* T */}
+        <path d="M250 20 H 290 M 270 20 V 80" stroke="#F5F5F5" strokeWidth="6" strokeLinecap="square" />
 
-        {/* Subtext: MOBILE BAR CO. */}
-        <text
-            x="210"
-            y="140"
-            textAnchor="middle"
-            fill={color}
-            fontFamily="sans-serif"
-            fontSize="14"
-            letterSpacing="4"
-            fontWeight="bold"
-        >
+        {/* Subtext */}
+        <text x="150" y="115" textAnchor="middle" fill="#D4AF37" fontFamily="sans-serif" fontSize="12" letterSpacing="3" fontWeight="bold">
             MOBILE BAR CO.
         </text>
     </svg>

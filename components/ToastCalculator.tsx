@@ -111,9 +111,10 @@ export default function ToastCalculator() {
                     </div>
 
                     {/* Results Side */}
-                    <div className="bg-brand-gold p-8 md:p-12 text-brand-dark flex flex-col justify-between relative overflow-hidden">
-                        {/* Background pattern opacity */}
-                        <div className="absolute inset-0 bg-white/10 opacity-20 pointer-events-none" />
+                    <div className="bg-gradient-to-br from-[#D4AF37] to-[#B89225] p-8 md:p-12 text-brand-dark flex flex-col justify-between relative overflow-hidden">
+                        {/* Background texture/noise */}
+                        <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 pointer-events-none mix-blend-overlay" />
+                        <div className="absolute inset-0 bg-white/10 opacity-10 pointer-events-none" />
 
                         <div className="relative z-10">
                             <h3 className="text-xl font-bold uppercase tracking-widest border-b-2 border-brand-dark/20 pb-4 mb-8">Estimated Shopping List</h3>

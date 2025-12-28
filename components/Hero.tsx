@@ -8,6 +8,10 @@ export default function Hero() {
     return (
         <section className="relative h-screen flex items-center justify-center overflow-hidden">
             {/* Background Gradient/Image Placeholder */}
+            {/* Added vignette overlay: bg-gradient-to-t is a simple way, or radial gradient. 
+                Using a radial gradient that is transparent in center and black/dark on outside. */}
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_transparent_0%,_#000000_100%)] opacity-70 z-1" />
+
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-zinc-800 to-brand-dark z-0" />
             <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center opacity-20 mix-blend-overlay z-0" />
 

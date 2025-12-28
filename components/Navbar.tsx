@@ -32,7 +32,7 @@ export default function Navbar() {
         >
             <div className="container mx-auto px-6 flex justify-between items-center">
                 <Link href="/" className="block">
-                    <ToastLogo className="h-12 md:h-16 w-auto" color="#D4AF37" />
+                    <ToastLogo className="h-12 md:h-16 w-auto" />
                 </Link>
 
                 {/* Desktop Menu */}
