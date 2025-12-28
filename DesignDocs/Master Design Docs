@@ -1,0 +1,67 @@
+Act as a Senior Frontend Developer and UI/UX Designer.
+
+I need you to build a single-page landing website for a premium mobile bartending service called "TOAST Mobile Bar" (ToastMobile.bar). The business is a husband-and-wife-owned "Dry Hire" service in Texas.
+
+**Tech Stack:**
+- Next.js 14 (App Router)
+- Tailwind CSS
+- Lucide React (for icons)
+- Framer Motion (for subtle entrance animations)
+- Shadcn UI (if available, otherwise use raw Tailwind components)
+
+**Design System ("Warm Luxury"):**
+- **Background:** Deep Charcoal (#1A1A1A) - Use this for the main background.
+- **Primary Text:** Cream/Off-White (#F5F5F5).
+- **Brand Accent:** Champagne Gold (#D4AF37) - Use for buttons, borders, and key icons.
+- **Fonts:**
+  - Headings: "Playfair Display" (Serif, Elegant, Bold).
+  - Body: "Lato" or "Inter" (Sans-serif, Clean).
+- **Vibe:** Celebratory, warm, trustworthy, and high-end. Avoid "industrial" or "gritty" looks.
+
+**Page Structure & Content:**
+
+1. **Navigation:**
+   - Logo text: "TOAST" (Playfair Display, Bold, Tracking-wide).
+   - Links: How it Works, Calculator, Services, Contact.
+   - CTA Button: "Book Now" (Gold background, Charcoal text).
+
+2. **Hero Section:**
+   - Headline: "RAISE A GLASS. WE'LL HANDLE THE REST."
+   - Subhead: "Texas' premier dry-hire mobile bar service. You bring the spirits, we bring the service, style, and stress-free planning."
+   - Primary Button: "Calculate Your Menu" (Scrolls to the Calculator section).
+
+3. **The 'Toast Calculator' (Core Feature - Interactive):**
+   - Title: "The Toast Calculator"
+   - Description: "Don't guess. Know exactly what to buy."
+   - **Logic Required:**
+     - Inputs: Slider for `Guests` (10-300), Slider for `Hours` (2-8), Select for `Vibe` (Light, Average, Heavy).
+     - Math:
+       - Base Rule: 2 drinks first hour + 1 drink per additional hour.
+       - Vibe Modifier: Light (0.7x), Average (1.0x), Heavy (1.3x).
+       - Total Drinks = (Guests * ((Hours - 1) + 2)) * Modifier.
+     - Breakdown:
+       - Beer: 50% of Total Drinks (Display as "Cases of Beer" -> Divide by 24).
+       - Wine: 25% of Total Drinks (Display as "Bottles of Wine" -> Divide by 5).
+       - Liquor: 25% of Total Drinks (Display as "Liquor Bottles (750ml)" -> Divide by 17).
+   - *Design Note:* Make this look like a premium tool. Dark card background, gold sliders, live updating numbers.
+
+4. **"How It Works" (3 Columns):**
+   - Icon: Clipboard/List -> Title: "The Plan" -> Text: "Use our tech to generate your perfect shopping list."
+   - Icon: ShoppingBag -> Title: "The Buy" -> Text: "You purchase the alcohol directly (no markups)."
+   - Icon: Wine/Martini -> Title: "The Toast" -> Text: "We arrive with the bar, ice, mixers, and garnishes to serve."
+
+5. **"About Us" Section:**
+   - Title: "Family Owned & Operated"
+   - Text: "Run by a husband and wife team in Texas. We combine tech-forward planning with old-school hospitality."
+
+6. **Services / Pricing (2 Cards):**
+   - Card 1: "The Co-Pilot" (Service Only). Includes: Bartender labor, tools, setup.
+   - Card 2: "The Full Toast" (All Inclusive). Includes: Portable Bar, Cups, Ice (1.5lbs/person), Mixers, Garnishes, & Labor. *Highlight this card.*
+
+7. **Footer:**
+   - Simple contact form (Name, Email, Date).
+   - Social link: @ToastMobileBar.
+   - Copyright 2025 Toast Mobile Bar.
+
+**Deliverable:**
+Please generate the complete code for the main `page.tsx` and any necessary components. Ensure the calculator logic is accurate and robust. Use responsive design for mobile optimization.
