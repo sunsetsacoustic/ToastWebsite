@@ -27,7 +27,7 @@ export default function Services() {
                                 "Custom Menu Consultation"
                             ].map((item, i) => (
                                 <li key={i} className="flex items-start gap-3 text-white/80">
-                                    <Check size={18} className="text-brand-gold mt-1 shrink-0" />
+                                    <Check size={18} className="text-brand-primary mt-1 shrink-0" />
                                     <span>{item}</span>
                                 </li>
                             ))}
@@ -39,13 +39,13 @@ export default function Services() {
                     </div>
 
                     {/* Card 2: Full Toast */}
-                    <div className="bg-zinc-800/80 border border-brand-gold/30 rounded-xl p-8 relative transform md:-translate-y-4 shadow-2xl shadow-black/50 flex flex-col ring-1 ring-brand-gold/20">
+                    <div className="bg-zinc-800/80 border border-brand-primary/30 rounded-xl p-8 relative transform md:-translate-y-4 shadow-2xl shadow-black/50 flex flex-col ring-1 ring-brand-primary/20">
                         {/* Badge */}
-                        <div className="absolute top-0 right-0 bg-brand-gold text-brand-dark text-xs font-bold px-3 py-1 rounded-bl-lg uppercase tracking-wider flex items-center gap-1">
+                        <div className="absolute top-0 right-0 bg-brand-primary text-brand-dark text-xs font-bold px-3 py-1 rounded-bl-lg uppercase tracking-wider flex items-center gap-1">
                             <Star size={12} fill="currentColor" /> Most Popular
                         </div>
 
-                        <h3 className="text-2xl font-display font-bold text-brand-gold mb-2">The Full Toast</h3>
+                        <h3 className="text-2xl font-display font-bold text-brand-primary mb-2">The Full Toast</h3>
                         <p className="text-white/40 mb-8 uppercase tracking-widest text-xs font-bold">All Inclusive</p>
 
                         <ul className="space-y-4 mb-8 flex-grow">
@@ -59,23 +59,23 @@ export default function Services() {
                                 "Printed Menu Display"
                             ].map((item, i) => (
                                 <li key={i} className="flex items-start gap-3 text-white">
-                                    <Check size={18} className="text-brand-gold mt-1 shrink-0" />
+                                    <Check size={18} className="text-brand-primary mt-1 shrink-0" />
                                     <span>{item}</span>
                                 </li>
                             ))}
                         </ul>
 
-                        <button className="w-full py-3 bg-brand-gold text-brand-dark rounded-sm font-bold tracking-wider hover:bg-yellow-500 transition-all uppercase text-sm shadow-lg shadow-brand-gold/20">
+                        <button className="w-full py-3 bg-brand-primary text-brand-dark rounded-sm font-bold tracking-wider hover:bg-yellow-500 transition-all uppercase text-sm shadow-lg shadow-brand-primary/20">
                             Book The Full Experience
                         </button>
                     </div>
                 </div>
 
                 {/* Photographer Add-on */}
-                <div className="max-w-4xl mx-auto mt-16 bg-gradient-to-r from-zinc-900 via-zinc-800 to-zinc-900 border border-white/10 rounded-xl p-8 flex flex-col md:flex-row items-center gap-8 relative overflow-hidden group">
-                    <div className="absolute inset-0 bg-brand-gold/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="max-w-4xl mx-auto mt-16 bg-gradient-to-r from-zinc-900 via-zinc-800 to-zinc-900 border border-brand-secondary/10 rounded-xl p-8 flex flex-col md:flex-row items-center gap-8 relative overflow-hidden group">
+                    <div className="absolute inset-0 bg-brand-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
-                    <div className="bg-brand-dark p-4 rounded-full text-brand-gold border border-brand-gold/20 relative z-10 shrink-0">
+                    <div className="bg-brand-dark p-4 rounded-full text-brand-primary border border-brand-primary/20 relative z-10 shrink-0">
                         <Camera size={32} strokeWidth={1.5} />
                     </div>
 
@@ -88,7 +88,7 @@ export default function Services() {
                     </div>
 
                     <div className="relative z-10 shrink-0">
-                        <span className="inline-block px-6 py-2 border border-brand-gold/30 rounded-full text-brand-gold text-sm font-bold tracking-wider uppercase hover:bg-brand-gold hover:text-brand-dark transition-all cursor-default">
+                        <span className="inline-block px-6 py-2 border border-brand-primary/30 rounded-full text-brand-primary text-sm font-bold tracking-wider uppercase hover:bg-brand-primary hover:text-brand-dark transition-all cursor-default">
                             Inquire For Pricing
                         </span>
                     </div>

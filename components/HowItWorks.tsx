@@ -25,7 +25,7 @@ export default function HowItWorks() {
     return (
         <section className="py-28 bg-brand-dark relative overflow-hidden">
             {/* Background decoration */}
-            <div className="absolute top-0 right-0 w-96 h-96 bg-brand-gold/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+            <div className="absolute top-0 right-0 w-96 h-96 bg-brand-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
 
             <div className="container mx-auto px-6 relative z-10">
                 <motion.div
@@ -35,7 +35,7 @@ export default function HowItWorks() {
                     className="text-center mb-20"
                 >
                     <h2 className="text-4xl md:text-5xl font-display font-bold text-brand-cream mb-4">How It Works</h2>
-                    <div className="w-24 h-1 bg-brand-gold mx-auto rounded-full" />
+                    <div className="w-24 h-1 bg-brand-primary mx-auto rounded-full" />
                 </motion.div>
 
                 <div className="grid md:grid-cols-3 gap-12 max-w-6xl mx-auto">
@@ -48,7 +48,7 @@ export default function HowItWorks() {
                             viewport={{ once: true }}
                             className="group text-center"
                         >
-                            <div className="w-24 h-24 mx-auto bg-white/5 rounded-full flex items-center justify-center text-brand-gold mb-8 group-hover:scale-110 group-hover:bg-brand-gold group-hover:text-brand-dark transition-all duration-300">
+                            <div className="w-24 h-24 mx-auto bg-white/5 rounded-full flex items-center justify-center text-brand-primary mb-8 group-hover:scale-110 group-hover:bg-brand-primary group-hover:text-brand-dark transition-all duration-300">
                                 {step.icon}
                             </div>
                             <h3 className="text-2xl font-display font-bold text-white mb-4">{step.title}</h3>

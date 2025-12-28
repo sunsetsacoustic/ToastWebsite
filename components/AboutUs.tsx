@@ -30,7 +30,7 @@ export default function AboutUs() {
                         transition={{ duration: 0.8, delay: 0.2 }}
                         className="text-left"
                     >
-                        <span className="text-brand-gold font-bold tracking-widest text-sm uppercase mb-4 block">
+                        <span className="text-brand-primary font-bold tracking-widest text-sm uppercase mb-4 block">
                             Who We Are
                         </span>
                         <h2 className="text-4xl md:text-5xl font-display font-bold text-brand-cream mb-8">
@@ -42,8 +42,8 @@ export default function AboutUs() {
                         </p>
 
                         <div className="flex items-center gap-4">
-                            <div className="h-px w-12 bg-brand-gold/50" />
-                            <span className="text-brand-gold font-display italic text-2xl">The Toast Team</span>
+                            <div className="h-px w-12 bg-brand-primary/50" />
+                            <span className="text-brand-primary font-display italic text-2xl">The Toast Team</span>
                         </div>
                     </motion.div>
 

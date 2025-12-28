@@ -18,15 +18,15 @@ export default function Footer() {
 
                         <div className="space-y-4">
                             <div className="flex items-center gap-3 text-white/80">
-                                <Mail size={20} className="text-brand-gold" />
+                                <Mail size={20} className="text-brand-primary" />
                                 <a href="mailto:hello@toastmobile.bar" className="hover:text-white transition-colors">hello@toastmobile.bar</a>
                             </div>
                             <div className="flex items-center gap-3 text-white/80">
-                                <Instagram size={20} className="text-brand-gold" />
+                                <Instagram size={20} className="text-brand-primary" />
                                 <a href="https://instagram.com/ToastMobileBar" target="_blank" className="hover:text-white transition-colors">@ToastMobileBar</a>
                             </div>
                             <div className="flex items-center gap-3 text-white/80">
-                                <MapPin size={20} className="text-brand-gold" />
+                                <MapPin size={20} className="text-brand-primary" />
                                 <span>Serving Houston & Kingwood</span>
                             </div>
                         </div>
@@ -37,25 +37,25 @@ export default function Footer() {
                         <div className="grid md:grid-cols-2 gap-4 mb-4">
                             <div className="space-y-2">
                                 <label className="text-xs uppercase font-bold text-white/60 tracking-wider">Name</label>
-                                <input type="text" className="w-full bg-black/40 border border-white/10 rounded-md p-3 text-white focus:outline-none focus:border-brand-gold transition-colors" placeholder="Jane Doe" />
+                                <input type="text" className="w-full bg-black/40 border border-white/10 rounded-md p-3 text-white focus:outline-none focus:border-brand-primary transition-colors" placeholder="Jane Doe" />
                             </div>
                             <div className="space-y-2">
                                 <label className="text-xs uppercase font-bold text-white/60 tracking-wider">Date</label>
-                                <input type="date" className="w-full bg-black/40 border border-white/10 rounded-md p-3 text-white/80 focus:outline-none focus:border-brand-gold transition-colors" />
+                                <input type="date" className="w-full bg-black/40 border border-white/10 rounded-md p-3 text-white/80 focus:outline-none focus:border-brand-primary transition-colors" />
                             </div>
                         </div>
 
                         <div className="space-y-2 mb-4">
                             <label className="text-xs uppercase font-bold text-white/60 tracking-wider">Email</label>
-                            <input type="email" className="w-full bg-black/40 border border-white/10 rounded-md p-3 text-white focus:outline-none focus:border-brand-gold transition-colors" placeholder="jane@example.com" />
+                            <input type="email" className="w-full bg-black/40 border border-white/10 rounded-md p-3 text-white focus:outline-none focus:border-brand-primary transition-colors" placeholder="jane@example.com" />
                         </div>
 
                         <div className="space-y-2 mb-6">
                             <label className="text-xs uppercase font-bold text-white/60 tracking-wider">Message</label>
-                            <textarea rows={4} className="w-full bg-black/40 border border-white/10 rounded-md p-3 text-white focus:outline-none focus:border-brand-gold transition-colors" placeholder="Tell us about your event..." />
+                            <textarea rows={4} className="w-full bg-black/40 border border-white/10 rounded-md p-3 text-white focus:outline-none focus:border-brand-primary transition-colors" placeholder="Tell us about your event..." />
                         </div>
 
-                        <button type="button" className="w-full bg-brand-gold text-brand-dark font-bold py-3 rounded-md uppercase tracking-widest hover:bg-yellow-500 transition-all">
+                        <button type="button" className="w-full bg-brand-primary text-brand-dark font-bold py-3 rounded-md uppercase tracking-widest hover:bg-yellow-500 transition-all">
                             Send Inquiry
                         </button>
                     </form>

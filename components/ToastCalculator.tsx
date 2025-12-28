@@ -40,7 +40,7 @@ export default function ToastCalculator() {
                     {/* Controls Side */}
                     <div className="p-8 md:p-12 space-y-10">
                         <div>
-                            <h2 className="text-3xl font-display font-bold text-brand-gold mb-2">The Toast Calculator</h2>
+                            <h2 className="text-3xl font-display font-bold text-brand-primary mb-2">The Toast Calculator</h2>
                             <p className="text-white/60">Don't guess. Know exactly what to buy.</p>
                         </div>
 
@@ -48,7 +48,7 @@ export default function ToastCalculator() {
                         <div className="space-y-4">
                             <div className="flex justify-between items-end">
                                 <label className="text-sm uppercase tracking-widest font-bold text-white/80">Guests</label>
-                                <span className="text-2xl font-display font-bold text-brand-gold">{guests}</span>
+                                <span className="text-2xl font-display font-bold text-brand-primary">{guests}</span>
                             </div>
                             <input
                                 type="range"
@@ -56,7 +56,7 @@ export default function ToastCalculator() {
                                 max="300"
                                 value={guests}
                                 onChange={(e) => setGuests(parseInt(e.target.value))}
-                                className="w-full h-2 bg-white/10 rounded-lg appearance-none cursor-pointer accent-brand-gold hover:accent-yellow-400 transition-all"
+                                className="w-full h-2 bg-white/10 rounded-lg appearance-none cursor-pointer accent-brand-primary hover:accent-yellow-400 transition-all"
                             />
                             <div className="flex justify-between text-xs text-white/40">
                                 <span>10</span>
@@ -68,7 +68,7 @@ export default function ToastCalculator() {
                         <div className="space-y-4">
                             <div className="flex justify-between items-end">
                                 <label className="text-sm uppercase tracking-widest font-bold text-white/80">Duration</label>
-                                <span className="text-2xl font-display font-bold text-brand-gold">{hours} Hours</span>
+                                <span className="text-2xl font-display font-bold text-brand-primary">{hours} Hours</span>
                             </div>
                             <input
                                 type="range"
@@ -76,7 +76,7 @@ export default function ToastCalculator() {
                                 max="8"
                                 value={hours}
                                 onChange={(e) => setHours(parseInt(e.target.value))}
-                                className="w-full h-2 bg-white/10 rounded-lg appearance-none cursor-pointer accent-brand-gold hover:accent-yellow-400 transition-all"
+                                className="w-full h-2 bg-white/10 rounded-lg appearance-none cursor-pointer accent-brand-primary hover:accent-yellow-400 transition-all"
                             />
                             <div className="flex justify-between text-xs text-white/40">
                                 <span>2 Hrs</span>
@@ -93,7 +93,7 @@ export default function ToastCalculator() {
                                         key={v}
                                         onClick={() => setVibe(v)}
                                         className={`py-3 px-2 rounded-lg text-sm font-bold border transition-all duration-300 capitalize ${vibe === v
-                                            ? "bg-brand-gold text-brand-dark border-brand-gold scale-105 shadow-lg shadow-brand-gold/20"
+                                            ? "bg-brand-primary text-brand-dark border-brand-primary scale-105 shadow-lg shadow-brand-primary/20"
                                             : "bg-white/5 text-white/60 border-transparent hover:bg-white/10 hover:text-white"
                                             }`}
                                     >
@@ -111,7 +111,7 @@ export default function ToastCalculator() {
                     </div>
 
                     {/* Results Side */}
-                    <div className="bg-gradient-to-br from-[#D4AF37] to-[#B89225] p-8 md:p-12 text-brand-dark flex flex-col justify-between relative overflow-hidden">
+                    <div className="bg-gradient-to-br from-brand-primary to-[#5A7D8F] p-8 md:p-12 text-brand-dark flex flex-col justify-between relative overflow-hidden">
                         {/* Background texture/noise */}
                         <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 pointer-events-none mix-blend-overlay" />
                         <div className="absolute inset-0 bg-white/10 opacity-10 pointer-events-none" />

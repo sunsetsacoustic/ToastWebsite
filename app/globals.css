@@ -4,12 +4,20 @@
   --font-display: var(--font-playfair);
   --font-sans: var(--font-inter);
 
-  --color-background: #1A1A1A;
-  --color-foreground: #F5F5F5;
-  
-  --color-brand-gold: #D4AF37;
-  --color-brand-dark: #1A1A1A;
-  --color-brand-cream: #F5F5F5;
+  --color-background: #0F172A;
+  --color-foreground: #F8FAFC;
+
+  --color-brand-primary: #7DA0B1;
+  /* Dusty Blue */
+  --color-brand-secondary: #E2E8F0;
+  /* Sterling Silver */
+  --color-brand-dark: #0F172A;
+  /* Midnight Navy */
+  --color-brand-cream: #F8FAFC;
+  /* Crisp White */
+
+  /* Retaining legacy names mapped to new colors for compatibility until refactor is complete */
+  --color-brand-gold: #7DA0B1;
 }
 
 /*
@@ -25,6 +33,11 @@ body {
   font-family: var(--font-sans);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-display);
 }

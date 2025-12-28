@@ -41,14 +41,14 @@ export default function Navbar() {
                         <Link
                             key={link.name}
                             href={link.href}
-                            className="text-sm font-medium text-white/80 hover:text-brand-gold transition-colors tracking-wide"
+                            className="text-sm font-medium text-white/80 hover:text-brand-primary transition-colors tracking-wide"
                         >
                             {link.name}
                         </Link>
                     ))}
                     <Link
                         href="#contact"
-                        className="px-6 py-2.5 bg-brand-gold text-brand-dark font-bold text-sm tracking-wide rounded-sm hover:bg-yellow-500 transition-colors"
+                        className="px-6 py-2.5 bg-brand-primary text-brand-dark font-bold text-sm tracking-wide rounded-sm hover:bg-yellow-500 transition-colors"
                     >
                         BOOK NOW
                     </Link>
@@ -56,7 +56,7 @@ export default function Navbar() {
 
                 {/* Mobile Menu Button */}
                 <button
-                    className="md:hidden text-white hover:text-brand-gold transition-colors"
+                    className="md:hidden text-white hover:text-brand-primary transition-colors"
                     onClick={() => setIsOpen(!isOpen)}
                 >
                     {isOpen ? <X size={28} /> : <Menu size={28} />}
@@ -77,7 +77,7 @@ export default function Navbar() {
                                 <Link
                                     key={link.name}
                                     href={link.href}
-                                    className="text-lg font-medium text-white/90 hover:text-brand-gold"
+                                    className="text-lg font-medium text-white/90 hover:text-brand-primary"
                                     onClick={() => setIsOpen(false)}
                                 >
                                     {link.name}
@@ -85,7 +85,7 @@ export default function Navbar() {
                             ))}
                             <Link
                                 href="#contact"
-                                className="px-8 py-3 bg-brand-gold text-brand-dark font-bold tracking-wide rounded-sm mt-4"
+                                className="px-8 py-3 bg-brand-primary text-brand-dark font-bold tracking-wide rounded-sm mt-4"
                                 onClick={() => setIsOpen(false)}
                             >
                                 BOOK NOW

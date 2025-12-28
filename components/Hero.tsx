@@ -43,7 +43,7 @@ export default function Hero() {
                 >
                     <Link
                         href="#calculator"
-                        className="inline-flex items-center gap-2 bg-brand-gold hover:bg-yellow-500 text-brand-dark px-8 py-4 rounded-sm font-bold tracking-widest transition-all transform hover:scale-105"
+                        className="inline-flex items-center gap-2 bg-brand-primary hover:bg-yellow-500 text-brand-dark px-8 py-4 rounded-sm font-bold tracking-widest transition-all transform hover:scale-105"
                     >
                         CALCULATE YOUR MENU
                         <ArrowDown size={18} />
