@@ -7,6 +7,7 @@ import HowItWorks from "@/components/HowItWorks";
 import AboutUs from "@/components/AboutUs";
 import Services from "@/components/Services";
 import Footer from "@/components/Footer";
+import Contact from "@/components/Contact";
 
 export default function Home() {
   return (
@@ -25,6 +26,7 @@ export default function Home() {
       <div id="services">
         <Services />
       </div>
+      <Contact />
       <Footer />
     </main>
   );
