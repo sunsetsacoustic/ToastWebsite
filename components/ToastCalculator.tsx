@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { Beer, Wine, GlassWater, DollarSign, ArrowRight } from "lucide-react";
 import { useRouter } from "next/navigation";
-import { usePartyCalculator, SpiritType } from "../hooks/usePartyCalculator";
+import { usePartyCalculator, SpiritType } from "@/hooks/usePartyCalculator";
 
 const SPIRITS: SpiritType[] = ['Vodka', 'Gin', 'Tequila', 'Whiskey', 'Rum'];
 
