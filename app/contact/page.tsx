@@ -29,13 +29,38 @@ function ContactForm() {
         }
     }, [searchParams]);
 
-    const handleSubmit = async (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         setIsLoading(true);
-        // Simulate sending
-        await new Promise(resolve => setTimeout(resolve, 1500));
-        setIsLoading(false);
-        alert("Thanks! This is a demo, so no email was sent, but the form works!");
+
+        const formData = new FormData(e.currentTarget);
+
+        try {
+            const response = await fetch('/api/contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    name: formData.get('name'),
+                    email: formData.get('email'),
+                    date: formData.get('date'),
+                    message: message,
+                }),
+            });
+
+            if (response.ok) {
+                alert("Quote request sent successfully! We'll be in touch soon.");
+                // Reset could happen here, or redirect
+            } else {
+                alert("Something went wrong. Please try again.");
+            }
+        } catch (error) {
+            console.error(error);
+            alert("Error sending message. Please try again.");
+        } finally {
+            setIsLoading(false);
+        }
     };
 
     return (
@@ -76,6 +101,7 @@ function ContactForm() {
                                     <input
                                         type="text"
                                         id="name"
+                                        name="name"
                                         required
                                         className="peer w-full bg-transparent border-b border-white/20 py-4 text-white focus:outline-none focus:border-white transition-colors placeholder-transparent"
                                         placeholder="Name"
@@ -91,6 +117,7 @@ function ContactForm() {
                                     <input
                                         type="date"
                                         id="date"
+                                        name="date"
                                         className="peer w-full bg-transparent border-b border-white/20 py-4 text-white/90 focus:outline-none focus:border-white transition-colors"
                                     />
                                     <label
@@ -106,6 +133,7 @@ function ContactForm() {
                                 <input
                                     type="email"
                                     id="email"
+                                    name="email"
                                     required
                                     className="peer w-full bg-transparent border-b border-white/20 py-4 text-white focus:outline-none focus:border-white transition-colors placeholder-transparent"
                                     placeholder="Email"
