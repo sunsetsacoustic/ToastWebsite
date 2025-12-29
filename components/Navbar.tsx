@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ToastLogo } from "@/components/ToastLogo";
+import { BrandLogo } from "@/components/BrandLogo";
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
@@ -33,7 +33,7 @@ export default function Navbar() {
         >
             <div className="container mx-auto px-6 flex justify-between items-center">
                 <Link href="/" className="block">
-                    <ToastLogo className="h-12 md:h-16 w-auto" />
+                    <BrandLogo className="h-8 md:h-10" />
                 </Link>
 
                 {/* Desktop Menu */}
