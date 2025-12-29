@@ -19,15 +19,16 @@ export default function Navbar() {
     }, []);
 
     const navLinks = [
-        { name: "How it Works", href: "#how-it-works" },
-        { name: "Calculator", href: "#calculator" },
-        { name: "Services", href: "#services" },
-        { name: "Contact", href: "#contact" },
+        { name: "How it Works", href: "/#how-it-works" },
+        { name: "Calculator", href: "/#calculator" },
+        { name: "Services", href: "/#services" },
+        { name: "Menu", href: "/menu" },
+        { name: "Contact", href: "/#contact" },
     ];
 
     return (
         <nav
-            className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${scrolled ? "bg-brand-dark/95 backdrop-blur-sm border-b border-white/10 py-4" : "bg-transparent py-6"
+            className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${scrolled ? "bg-brand-dark/40 backdrop-blur-md border-b border-white/5 py-4" : "bg-transparent py-6"
                 }`}
         >
             <div className="container mx-auto px-6 flex justify-between items-center">
@@ -47,7 +48,7 @@ export default function Navbar() {
                         </Link>
                     ))}
                     <Link
-                        href="#contact"
+                        href="/#contact"
                         className="px-6 py-2.5 bg-brand-primary text-brand-dark font-bold text-sm tracking-wide rounded-sm hover:bg-yellow-500 transition-colors"
                     >
                         BOOK NOW
@@ -84,7 +85,7 @@ export default function Navbar() {
                                 </Link>
                             ))}
                             <Link
-                                href="#contact"
+                                href="/#contact"
                                 className="px-8 py-3 bg-brand-primary text-brand-dark font-bold tracking-wide rounded-sm mt-4"
                                 onClick={() => setIsOpen(false)}
                             >

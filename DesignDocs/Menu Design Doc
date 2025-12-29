@@ -1,0 +1,62 @@
+Step 1: The "Brain" (Data & Types)
+We need a central place to store the drink data so both the Admin page and the Public page can see it.
+
+Copy & Paste this into Cursor (Composer):
+
+"I want to add a drink menu feature to my existing website.
+
+Create a new file types/drink.ts (or types.ts) and define a Drink interface with:
+
+id, name, description, price, category, image, ingredients list, and an 'isFeatured' boolean.
+
+Create a generic data file data/sampleDrinks.ts with 6 high-end cocktail examples (Sidecar, Old Fashioned, Espresso Martini, etc.) matching that interface.
+
+Create a simple state hook (or context) that allows me to add, update, and delete drinks from this list.
+
+Please analyze my current project structure first to decide where these files best fit."
+
+Step 2: The "Face" (The Minimalist Presenter)
+This is the client-facing page. Since you mentioned wanting a minimalist theme earlier, we will instruct Cursor to strip away the noise.
+
+Copy & Paste this into Cursor:
+
+"Create a new component called MenuPresenter.
+
+Design Rules:
+
+STRICT Minimalist aesthetic. Large amounts of whitespace.
+
+Use a refined, thin sans-serif or elegant serif font for headers.
+
+No heavy borders or shadows. Use spacing to separate elements.
+
+Functionality:
+
+Display the drinks from our data source in a responsive grid.
+
+Each item should show the Name, the Ingredients (separated by small dots), and the Price.
+
+Group them by Category (e.g., 'Signature', 'Classics').
+
+If isFeatured is true, give that drink a special layout highlight at the top.
+
+Please ensure this component fits into my existing page layout wrapper."
+
+Step 3: The "Control Room" (Admin/Manager)
+This is the hidden dashboard for you to manage the menu.
+
+Copy & Paste this into Cursor:
+
+"Now create a MenuManager component.
+
+Features:
+
+A clean list view of all current drinks with 'Edit' and 'Delete' buttons.
+
+A 'Create New Drink' button that opens a modal or a slide-over form.
+
+The form needs inputs for all the fields in our Drink interface.
+
+Use my existing UI components (buttons, inputs) if I have them; otherwise, style them with Tailwind to match the site's theme.
+
+This view should be functional and easy to use on mobile, in case I need to update the menu while at an event."
