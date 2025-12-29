@@ -28,9 +28,11 @@
 */
 
 body {
-  background-color: var(--color-background);
+  background: linear-gradient(to bottom, #000000, #09090b, #000000);
+  /* Rich Black Gradient */
   color: var(--color-foreground);
   font-family: var(--font-sans);
+  min-height: 100vh;
 }
 
 h1,

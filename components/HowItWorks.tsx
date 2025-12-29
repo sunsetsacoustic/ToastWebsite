@@ -6,24 +6,24 @@ import { motion } from "framer-motion";
 export default function HowItWorks() {
     const steps = [
         {
-            icon: <ClipboardList size={48} strokeWidth={1} />,
+            icon: <ClipboardList size={56} strokeWidth={1.5} />,
             title: "The Plan",
             text: "Use our tech to generate your perfect shopping list based on your guest count and preferences."
         },
         {
-            icon: <ShoppingBag size={48} strokeWidth={1} />,
+            icon: <ShoppingBag size={56} strokeWidth={1.5} />,
             title: "The Buy",
             text: "You purchase the alcohol directly from your preferred retailer. No markups, no hidden fees."
         },
         {
-            icon: <Wine size={48} strokeWidth={1} />,
+            icon: <Wine size={56} strokeWidth={1.5} />,
             title: "The Toast",
             text: "We arrive with the bar, ice, mixers, garnishes, and TABC-certified staff to serve your guests."
         }
     ];
 
     return (
-        <section className="py-28 bg-brand-dark relative overflow-hidden">
+        <section className="py-32 relative overflow-hidden" id="how-it-works">
             {/* Background decoration */}
             <div className="absolute top-0 right-0 w-96 h-96 bg-brand-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
 
@@ -38,7 +38,10 @@ export default function HowItWorks() {
                     <div className="w-24 h-1 bg-brand-primary mx-auto rounded-full" />
                 </motion.div>
 
-                <div className="grid md:grid-cols-3 gap-12 max-w-6xl mx-auto">
+                <div className="grid md:grid-cols-3 gap-12 max-w-6xl mx-auto relative">
+                    {/* Connecting Line (Desktop) */}
+                    <div className="hidden md:block absolute top-[48px] left-[16%] right-[16%] h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent z-0" />
+
                     {steps.map((step, index) => (
                         <motion.div
                             key={index}
@@ -46,13 +49,13 @@ export default function HowItWorks() {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ delay: index * 0.2 }}
                             viewport={{ once: true }}
-                            className="group text-center"
+                            className="group text-center relative z-10"
                         >
-                            <div className="w-24 h-24 mx-auto bg-white/5 rounded-full flex items-center justify-center text-brand-primary mb-8 group-hover:scale-110 group-hover:bg-brand-primary group-hover:text-brand-dark transition-all duration-300">
+                            <div className="w-24 h-24 mx-auto flex items-center justify-center text-white/80 mb-6 bg-brand-dark/50 backdrop-blur-sm rounded-full border border-transparent group-hover:border-white/10 transition-all duration-500">
                                 {step.icon}
                             </div>
-                            <h3 className="text-2xl font-display font-bold text-white mb-4">{step.title}</h3>
-                            <p className="text-white/60 leading-relaxed max-w-sm mx-auto">
+                            <h3 className="text-2xl font-display text-white mb-4">{step.title}</h3>
+                            <p className="text-zinc-400 leading-relaxed max-w-sm mx-auto font-light text-sm">
                                 {step.text}
                             </p>
                         </motion.div>
