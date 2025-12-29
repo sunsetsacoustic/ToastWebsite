@@ -18,7 +18,7 @@ export async function POST(request: Request) {
 
         const { data, error } = await resend.emails.send({
             from: 'Toast Mobile Bar <onboarding@resend.dev>', // Update this to your verified domain later
-            to: ['hello@toastmobile.bar'], // Replace with your actual receiving email or dynamic env var
+            to: ['sunsetsacoustic@gmail.com'], // Replace with your actual receiving email or dynamic env var
             replyTo: email,
             subject: `New Inquiry from ${name}`,
             html: `
