@@ -4,7 +4,7 @@ import { useState, useEffect, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { CheckCircle2, Send, Loader2 } from "lucide-react";
+import { CheckCircle2, ArrowRight, Loader2 } from "lucide-react";
 
 function ContactForm() {
     const searchParams = useSearchParams();
@@ -39,74 +39,108 @@ function ContactForm() {
     };
 
     return (
-        <main className="min-h-screen bg-brand-dark text-white selection:bg-brand-gold selection:text-brand-dark pt-24">
+        <main className="min-h-screen bg-brand-dark text-white selection:bg-brand-gold selection:text-brand-dark pt-32 pb-20 relative overflow-hidden">
+            {/* Background Decoration */}
+            <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_top,_var(--tw-gradient-stops))] from-brand-primary/10 via-brand-dark to-brand-dark opacity-50 pointer-events-none" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-primary/5 rounded-full blur-[100px] pointer-events-none" />
+
             <Navbar />
 
-            <section className="container mx-auto px-6 py-20 relative z-10">
+            <section className="container mx-auto px-6 relative z-10">
                 <div className="max-w-4xl mx-auto">
 
-                    <div className="text-center mb-16">
-                        <h1 className="text-5xl md:text-6xl font-display font-bold text-brand-cream mb-6">Contact Us</h1>
-                        <p className="text-white/60 text-lg font-light max-w-2xl mx-auto">
+                    <div className="text-center mb-16 space-y-4">
+                        <h1 className="text-5xl md:text-7xl font-serif text-white">Contact Us</h1>
+                        <p className="text-zinc-400 text-lg font-light max-w-xl mx-auto">
                             Let's make your event unforgettable. Fill out the details below and we'll get back to you within 24 hours.
                         </p>
                     </div>
 
-                    <div className="bg-zinc-900/40 backdrop-blur-md border border-white/10 rounded-2xl p-8 md:p-12 shadow-2xl relative overflow-hidden">
+                    <div className="bg-zinc-900/60 backdrop-blur-xl border border-white/10 rounded-3xl p-8 md:p-12 shadow-2xl relative overflow-hidden">
 
                         {hasParams && (
-                            <div className="bg-brand-primary/10 border border-brand-primary/20 rounded-lg p-4 mb-8 flex items-center gap-3 text-brand-primary animate-in fade-in slide-in-from-top-4 duration-500">
-                                <CheckCircle2 size={20} />
-                                <span className="font-bold text-sm tracking-wide uppercase">Party Details Loaded</span>
+                            <div className="bg-brand-primary/10 border-l-2 border-brand-primary p-4 mb-12 flex items-start gap-4 animate-in fade-in slide-in-from-top-4 duration-500 rounded-r-lg">
+                                <CheckCircle2 size={24} className="text-brand-primary shrink-0 mt-0.5" />
+                                <div>
+                                    <h3 className="font-bold text-brand-primary uppercase tracking-widest text-xs mb-1">Quote Details Loaded</h3>
+                                    <p className="text-zinc-300 text-sm font-light">
+                                        We've pre-filled the message with your calculator results. Feel free to add more details!
+                                    </p>
+                                </div>
                             </div>
                         )}
 
-                        <form onSubmit={handleSubmit} className="space-y-8">
-                            <div className="grid md:grid-cols-2 gap-8">
-                                <div className="space-y-3">
-                                    <label className="text-xs uppercase font-bold text-white/50 tracking-[0.2em] ml-1">Name</label>
+                        <form onSubmit={handleSubmit} className="space-y-12">
+                            <div className="grid md:grid-cols-2 gap-12">
+                                <div className="relative group">
                                     <input
                                         type="text"
+                                        id="name"
                                         required
-                                        className="w-full bg-white/5 border border-white/10 rounded-lg p-4 text-white placeholder:text-white/20 focus:outline-none focus:border-brand-primary focus:bg-white/10 transition-all"
-                                        placeholder="Jane Doe"
+                                        className="peer w-full bg-transparent border-b border-white/20 py-4 text-white focus:outline-none focus:border-white transition-colors placeholder-transparent"
+                                        placeholder="Name"
                                     />
+                                    <label
+                                        htmlFor="name"
+                                        className="absolute left-0 -top-3.5 text-xs font-bold uppercase tracking-[0.2em] text-zinc-500 peer-placeholder-shown:text-base peer-placeholder-shown:text-zinc-500 peer-placeholder-shown:top-4 transition-all peer-focus:-top-3.5 peer-focus:text-xs peer-focus:text-white"
+                                    >
+                                        Name
+                                    </label>
                                 </div>
-                                <div className="space-y-3">
-                                    <label className="text-xs uppercase font-bold text-white/50 tracking-[0.2em] ml-1">Event Date</label>
+                                <div className="relative group">
                                     <input
                                         type="date"
-                                        className="w-full bg-white/5 border border-white/10 rounded-lg p-4 text-white placeholder:text-white/20 focus:outline-none focus:border-brand-primary focus:bg-white/10 transition-all [&::-webkit-calendar-picker-indicator]:invert [&::-webkit-calendar-picker-indicator]:opacity-50 [&::-webkit-calendar-picker-indicator]:hover:opacity-100"
+                                        id="date"
+                                        className="peer w-full bg-transparent border-b border-white/20 py-4 text-white/90 focus:outline-none focus:border-white transition-colors"
                                     />
+                                    <label
+                                        htmlFor="date"
+                                        className="absolute left-0 -top-3.5 text-xs font-bold uppercase tracking-[0.2em] text-zinc-500"
+                                    >
+                                        Event Date
+                                    </label>
                                 </div>
                             </div>
 
-                            <div className="space-y-3">
-                                <label className="text-xs uppercase font-bold text-white/50 tracking-[0.2em] ml-1">Email</label>
+                            <div className="relative group">
                                 <input
                                     type="email"
+                                    id="email"
                                     required
-                                    className="w-full bg-white/5 border border-white/10 rounded-lg p-4 text-white placeholder:text-white/20 focus:outline-none focus:border-brand-primary focus:bg-white/10 transition-all"
-                                    placeholder="jane@example.com"
+                                    className="peer w-full bg-transparent border-b border-white/20 py-4 text-white focus:outline-none focus:border-white transition-colors placeholder-transparent"
+                                    placeholder="Email"
+                                    defaultValue={""}
                                 />
+                                <label
+                                    htmlFor="email"
+                                    className="absolute left-0 -top-3.5 text-xs font-bold uppercase tracking-[0.2em] text-zinc-500 peer-placeholder-shown:text-base peer-placeholder-shown:text-zinc-500 peer-placeholder-shown:top-4 transition-all peer-focus:-top-3.5 peer-focus:text-xs peer-focus:text-white"
+                                >
+                                    Email
+                                </label>
                             </div>
 
-                            <div className="space-y-3">
-                                <label className="text-xs uppercase font-bold text-white/50 tracking-[0.2em] ml-1">Message</label>
+                            <div className="relative group">
                                 <textarea
+                                    id="message"
                                     rows={6}
                                     required
                                     value={message}
                                     onChange={(e) => setMessage(e.target.value)}
-                                    className="w-full bg-white/5 border border-white/10 rounded-lg p-4 text-white placeholder:text-white/20 focus:outline-none focus:border-brand-primary focus:bg-white/10 transition-all leading-relaxed"
-                                    placeholder="Tell us about your event..."
+                                    className="peer w-full bg-transparent border-b border-white/20 py-4 text-white focus:outline-none focus:border-white transition-colors resize-none placeholder-transparent"
+                                    placeholder="Message"
                                 />
+                                <label
+                                    htmlFor="message"
+                                    className="absolute left-0 -top-3.5 text-xs font-bold uppercase tracking-[0.2em] text-zinc-500 peer-placeholder-shown:text-base peer-placeholder-shown:text-zinc-500 peer-placeholder-shown:top-4 transition-all peer-focus:-top-3.5 peer-focus:text-xs peer-focus:text-white"
+                                >
+                                    Message
+                                </label>
                             </div>
 
                             <button
                                 type="submit"
                                 disabled={isLoading}
-                                className="w-full bg-brand-primary text-brand-dark font-bold py-5 rounded-lg uppercase tracking-[0.2em] hover:bg-white hover:text-black transition-all flex items-center justify-center gap-3 disabled:opacity-70 disabled:cursor-not-allowed group"
+                                className="w-full bg-white text-black font-bold py-5 rounded-xl uppercase tracking-widest hover:-translate-y-1 hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-4 disabled:opacity-70 disabled:cursor-not-allowed group"
                             >
                                 {isLoading ? (
                                     <>
@@ -116,7 +150,7 @@ function ContactForm() {
                                 ) : (
                                     <>
                                         Send Inquiry
-                                        <Send size={18} className="group-hover:translate-x-1 transition-transform" />
+                                        <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
                                     </>
                                 )}
                             </button>
