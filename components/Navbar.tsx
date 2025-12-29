@@ -33,7 +33,7 @@ export default function Navbar() {
         >
             <div className="container mx-auto px-6 flex justify-between items-center">
                 <Link href="/" className="block">
-                    <BrandLogo className="h-8 md:h-10" />
+                    <BrandLogo className="h-10 md:h-12" />
                 </Link>
 
                 {/* Desktop Menu */}
