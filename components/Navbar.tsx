@@ -33,7 +33,7 @@ export default function Navbar() {
         >
             <div className="container mx-auto px-6 flex justify-between items-center">
                 <Link href="/" className="block">
-                    <BrandLogo className="h-10 md:h-12" />
+                    <img src="/toast-logo.png" alt="Toast Mobile Bar" className="h-10 md:h-12 w-auto object-contain" />
                 </Link>
 
                 {/* Desktop Menu */}
