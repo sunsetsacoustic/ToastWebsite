@@ -21,6 +21,7 @@ export default function Footer() {
                     <div className="flex items-center gap-8 text-sm text-zinc-500">
                         <a href="mailto:hello@toastmobile.bar" className="hover:text-white transition-colors">Email</a>
                         <a href="https://instagram.com/ToastMobileBar" target="_blank" className="hover:text-white transition-colors">Instagram</a>
+                        <a href="https://www.christophertoddvisuals.com/photography" target="_blank" className="hover:text-white transition-colors">Photography</a>
                         <span className="w-1 h-1 bg-zinc-800 rounded-full" />
                         <span className="text-zinc-700">&copy; 2025</span>
                     </div>
