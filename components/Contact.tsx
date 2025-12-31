@@ -2,11 +2,10 @@
 
 import { motion } from "framer-motion";
 import { useSearchParams } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useState, Suspense } from "react";
 
-export default function Contact() {
+function ContactContent() {
     const searchParams = useSearchParams();
-    // Use state to handle hydration match
     const [defaultMessage, setDefaultMessage] = useState("");
 
     useEffect(() => {
@@ -16,6 +15,99 @@ export default function Contact() {
         }
     }, [searchParams]);
 
+    return (
+        <form className="space-y-12">
+            <div className="grid md:grid-cols-2 gap-12">
+                <div className="relative group">
+                    <input
+                        type="text"
+                        id="name"
+                        className="peer w-full bg-transparent border-b border-white/20 py-4 text-white focus:outline-none focus:border-white transition-colors"
+                        placeholder=" "
+                    />
+                    <label
+                        htmlFor="name"
+                        className="absolute left-0 -top-3.5 text-xs font-bold uppercase tracking-[0.2em] text-zinc-500 peer-placeholder-shown:text-base peer-placeholder-shown:text-zinc-500 peer-placeholder-shown:top-4 transition-all peer-focus:-top-3.5 peer-focus:text-xs peer-focus:text-white"
+                    >
+                        Name
+                    </label>
+                </div>
+
+                <div className="relative group">
+                    <input
+                        type="date"
+                        id="date"
+                        className="peer w-full bg-transparent border-b border-white/20 py-4 text-white/90 focus:outline-none focus:border-white transition-colors"
+                    />
+                    <label
+                        htmlFor="date"
+                        className="absolute left-0 -top-3.5 text-xs font-bold uppercase tracking-[0.2em] text-zinc-500"
+                    >
+                        Date
+                    </label>
+                </div>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-12">
+                <div className="relative group">
+                    <input
+                        type="email"
+                        id="email"
+                        className="peer w-full bg-transparent border-b border-white/20 py-4 text-white focus:outline-none focus:border-white transition-colors"
+                        placeholder=" "
+                    />
+                    <label
+                        htmlFor="email"
+                        className="absolute left-0 -top-3.5 text-xs font-bold uppercase tracking-[0.2em] text-zinc-500 peer-placeholder-shown:text-base peer-placeholder-shown:text-zinc-500 peer-placeholder-shown:top-4 transition-all peer-focus:-top-3.5 peer-focus:text-xs peer-focus:text-white"
+                    >
+                        Email
+                    </label>
+                </div>
+
+                <div className="relative group">
+                    <input
+                        type="text"
+                        id="phone"
+                        className="peer w-full bg-transparent border-b border-white/20 py-4 text-white focus:outline-none focus:border-white transition-colors"
+                        placeholder=" "
+                    />
+                    <label
+                        htmlFor="phone"
+                        className="absolute left-0 -top-3.5 text-xs font-bold uppercase tracking-[0.2em] text-zinc-500 peer-placeholder-shown:text-base peer-placeholder-shown:text-zinc-500 peer-placeholder-shown:top-4 transition-all peer-focus:-top-3.5 peer-focus:text-xs peer-focus:text-white"
+                    >
+                        Phone
+                    </label>
+                </div>
+            </div>
+
+            <div className="relative group">
+                <textarea
+                    id="message"
+                    rows={4}
+                    className="peer w-full bg-transparent border-b border-white/20 py-4 text-white focus:outline-none focus:border-white transition-colors resize-none"
+                    placeholder=" "
+                    defaultValue={defaultMessage}
+                    key={defaultMessage}
+                />
+                <label
+                    htmlFor="message"
+                    className="absolute left-0 -top-3.5 text-xs font-bold uppercase tracking-[0.2em] text-zinc-500 peer-placeholder-shown:text-base peer-placeholder-shown:text-zinc-500 peer-placeholder-shown:top-4 transition-all peer-focus:-top-3.5 peer-focus:text-xs peer-focus:text-white"
+                >
+                    Tell us about your event
+                </label>
+            </div>
+
+            <button
+                type="button"
+                className="w-full bg-white text-black font-bold py-5 rounded-xl uppercase tracking-widest hover:-translate-y-1 hover:shadow-lg transition-all duration-300"
+            >
+                Send Inquiry
+            </button>
+        </form>
+    );
+}
+
+export default function Contact() {
     return (
         <section id="contact" className="py-32 relative">
             {/* Background Decoration */}
@@ -43,95 +135,9 @@ export default function Contact() {
                     transition={{ duration: 0.8, delay: 0.2 }}
                     className="bg-zinc-900/60 backdrop-blur-xl border border-white/10 rounded-3xl p-8 md:p-12 shadow-2xl"
                 >
-                    <form className="space-y-12">
-                        <div className="grid md:grid-cols-2 gap-12">
-                            <div className="relative group">
-                                <input
-                                    type="text"
-                                    id="name"
-                                    className="peer w-full bg-transparent border-b border-white/20 py-4 text-white focus:outline-none focus:border-white transition-colors"
-                                    placeholder=" "
-                                />
-                                <label
-                                    htmlFor="name"
-                                    className="absolute left-0 -top-3.5 text-xs font-bold uppercase tracking-[0.2em] text-zinc-500 peer-placeholder-shown:text-base peer-placeholder-shown:text-zinc-500 peer-placeholder-shown:top-4 transition-all peer-focus:-top-3.5 peer-focus:text-xs peer-focus:text-white"
-                                >
-                                    Name
-                                </label>
-                            </div>
-
-                            <div className="relative group">
-                                <input
-                                    type="date"
-                                    id="date"
-                                    className="peer w-full bg-transparent border-b border-white/20 py-4 text-white/90 focus:outline-none focus:border-white transition-colors"
-                                />
-                                <label
-                                    htmlFor="date"
-                                    className="absolute left-0 -top-3.5 text-xs font-bold uppercase tracking-[0.2em] text-zinc-500"
-                                >
-                                    Date
-                                </label>
-                            </div>
-                        </div>
-
-                        <div className="grid md:grid-cols-2 gap-12">
-                            <div className="relative group">
-                                <input
-                                    type="email"
-                                    id="email"
-                                    className="peer w-full bg-transparent border-b border-white/20 py-4 text-white focus:outline-none focus:border-white transition-colors"
-                                    placeholder=" "
-                                />
-                                <label
-                                    htmlFor="email"
-                                    className="absolute left-0 -top-3.5 text-xs font-bold uppercase tracking-[0.2em] text-zinc-500 peer-placeholder-shown:text-base peer-placeholder-shown:text-zinc-500 peer-placeholder-shown:top-4 transition-all peer-focus:-top-3.5 peer-focus:text-xs peer-focus:text-white"
-                                >
-                                    Email
-                                </label>
-                            </div>
-
-                            {/* Placeholder for Guests - optional, but balances layout if needed or keep single column below */}
-                            <div className="relative group">
-                                <input
-                                    type="text"
-                                    id="phone"
-                                    className="peer w-full bg-transparent border-b border-white/20 py-4 text-white focus:outline-none focus:border-white transition-colors"
-                                    placeholder=" "
-                                />
-                                <label
-                                    htmlFor="phone"
-                                    className="absolute left-0 -top-3.5 text-xs font-bold uppercase tracking-[0.2em] text-zinc-500 peer-placeholder-shown:text-base peer-placeholder-shown:text-zinc-500 peer-placeholder-shown:top-4 transition-all peer-focus:-top-3.5 peer-focus:text-xs peer-focus:text-white"
-                                >
-                                    Phone
-                                </label>
-                            </div>
-                        </div>
-
-                        <div className="relative group">
-                            <textarea
-                                id="message"
-                                rows={4}
-                                className="peer w-full bg-transparent border-b border-white/20 py-4 text-white focus:outline-none focus:border-white transition-colors resize-none"
-                                placeholder=" "
-                                defaultValue={defaultMessage}
-                                key={defaultMessage} // Force re-render when message changes
-                            />
-                            <label
-                                htmlFor="message"
-                                className="absolute left-0 -top-3.5 text-xs font-bold uppercase tracking-[0.2em] text-zinc-500 peer-placeholder-shown:text-base peer-placeholder-shown:text-zinc-500 peer-placeholder-shown:top-4 transition-all peer-focus:-top-3.5 peer-focus:text-xs peer-focus:text-white"
-                            >
-                                Tell us about your event
-                            </label>
-                        </div>
-
-                        <button
-                            type="button"
-                            className="w-full bg-white text-black font-bold py-5 rounded-xl uppercase tracking-widest hover:-translate-y-1 hover:shadow-lg transition-all duration-300"
-                        >
-                            Send Inquiry
-                        </button>
-                    </form>
+                    <Suspense fallback={<div className="text-center text-white/50">Loading form...</div>}>
+                        <ContactContent />
+                    </Suspense>
                 </motion.div>
             </div>
         </section>
