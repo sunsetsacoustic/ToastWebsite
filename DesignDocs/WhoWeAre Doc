@@ -1,0 +1,70 @@
+Step 1: "Who We Are" (The Editorial Look)
+Currently, shows a big grey box that feels like a placeholder. We want to change this to look like a spread in Vogue or GQ. We'll use a "floating image" style with rich typography.
+
+Copy & Paste this into Cursor (Composer):
+
+"Redesign the 'Who We Are' section to look like a high-end editorial magazine feature.
+
+Layout: Switch to a 2-column grid.
+
+Left Column (Image): Remove the grey background box. Render the image with a tall aspect ratio (3:4) and rounded-2xl. Add a subtle inner white border (border border-white/10) and a soft shadow to make it float.
+
+Right Column (Text): Center the text vertically.
+
+Typography:
+
+Headline: 'Family Owned & Operated' should be in the elegant Serif font, size 4XL or 5XL.
+
+Body: Use a relaxed, wide leading (line-height) for the paragraph text to make it easy to read. Color: text-zinc-300.
+
+Accent: Add a 'signature' element at the bottom (e.g., 'The Toast Team' in a script font or italic serif) to make it feel personal.
+
+Background: Ensure this section flows seamlessly with the global dark background, perhaps adding a very faint radial gradient behind the text to highlight it."
+
+Step 2: The Contact Section (The VIP Invite)
+We need to match the Glass Cockpit style of the Calculator so the transition is seamless.
+
+Copy & Paste this into Cursor (Composer):
+
+"Redesign the Contact Form section to match the glassmorphism of the Calculator.
+
+Container: Wrap the form form in a bg-zinc-900/60, backdrop-blur-xl, border border-white/10, rounded-3xl container.
+
+Input Styling (Luxury Style):
+
+Remove the default box borders.
+
+Style inputs as 'Underlined' only: transparent background, with a border-b border-white/20.
+
+On focus, the bottom border should transition to white (border-white).
+
+Label text should be small, uppercase, and tracking-widest (text-xs font-bold tracking-[0.2em] text-zinc-500).
+
+Submit Button:
+
+Make it Full Width.
+
+Style: Solid White background, Black text. This creates high contrast and signals 'Action'.
+
+Hover: slight lift (-translate-y-1) and shadow.
+
+Layout: Ensure the 'Name' and 'Date' fields are on the same row (grid-cols-2) for a tighter look."
+
+Step 3: The Footer (The Mic Drop)
+Finally, let's clean up the bottom. A luxury site doesn't need a cluttered footer. It just needs the brand.
+
+Copy & Paste this into Cursor (Composer):
+
+"Redesign the Footer component.
+
+Minimalism: Remove any heavy borders or complex links.
+
+Brand: Place the large <BrandLogo /> (our new SVG logo) in the center or left.
+
+Links: Display 'Instagram', 'Email', and 'Terms' as small, muted links (text-zinc-600 hover text-white).
+
+Copyright: Keep the copyright text tiny and centered.
+
+Spacing: Give it plenty of vertical padding (py-12) so the page ends gracefully, not abruptly."
+
+Once you run these, your site is effectively "Version 1.0" complete. It will have a consistent visual language from the video hero all the way to the footer. Let me know when you're ready to deploy or if you want to tweak the animations!

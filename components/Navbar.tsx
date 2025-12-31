@@ -23,6 +23,7 @@ export default function Navbar() {
         { name: "Calculator", href: "/#calculator" },
         { name: "Services", href: "/#services" },
         { name: "Menu", href: "/menu" },
+        { name: "Toast Mini", href: "/mini" },
         { name: "Contact", href: "/#contact" },
     ];
 

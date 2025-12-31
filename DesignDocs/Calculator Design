@@ -1,0 +1,31 @@
+"I need to completely redesign the Calculator component to match our new cinematic glassmorphism aesthetic.
+
+1. The Container (The Cockpit):
+
+Create a main wrapper that uses our glass effect: bg-zinc-900/60, backdrop-blur-xl, border border-white/10, and rounded-3xl.
+
+Add a subtle inner shadow or gradient to give it depth.
+
+2. The Inputs (Left Column):
+
+Typography: Use the Serif font for the header 'Event Details'.
+
+Sliders: Style the range inputs to be extremely thin (h-1). The 'thumb' (handle) should be a white circle with a subtle glow shadow. The active track color should be white, inactive track dark gray.
+
+Vibe Selector: Change the buttons to a 'Segmented Control' style. A single pill-shaped container with a sliding background to indicate selection (Light / Average / Heavy).
+
+3. The Outputs (Right Column - The HUD):
+
+Remove the solid blue background.
+
+Display the 3 results (Beer, Wine, Liquor) in a Grid.
+
+Visuals: Large, thin, elegant numbers (Serif font, text-5xl or 6xl). Underneath, a small uppercase label (Sans-serif, tracking-widest).
+
+Icons: Use faint, large Lucide icons (Beer, Wine, Glass) behind the numbers as a watermark (low opacity) or strictly minimal icons next to the label.
+
+4. Code Structure (Preparation for V2):
+
+Extract the calculation logic into a separate hook usePartyCalculator or function.
+
+This will allow us to easily swap in more complex math (like cocktail ratios or buying guides) later without breaking this new UI."

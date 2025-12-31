@@ -1,6 +1,6 @@
 "use client";
 
-import { Instagram, Mail, MapPin } from "lucide-react";
+import Link from "next/link";
 
 export default function Footer() {
     return (
@@ -19,6 +19,7 @@ export default function Footer() {
 
                     {/* Simple Links */}
                     <div className="flex items-center gap-8 text-sm text-zinc-500">
+                        <Link href="/mini" className="hover:text-white transition-colors">Kids Parties</Link>
                         <a href="mailto:hello@toastmobile.bar" className="hover:text-white transition-colors">Email</a>
                         <a href="https://instagram.com/ToastMobileBar" target="_blank" className="hover:text-white transition-colors">Instagram</a>
                         <a href="https://www.christophertoddvisuals.com/photography" target="_blank" className="hover:text-white transition-colors">Photography</a>

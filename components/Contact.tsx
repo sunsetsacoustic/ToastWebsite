@@ -1,8 +1,21 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useSearchParams } from "next/navigation";
+import { useEffect, useState } from "react";
 
 export default function Contact() {
+    const searchParams = useSearchParams();
+    // Use state to handle hydration match
+    const [defaultMessage, setDefaultMessage] = useState("");
+
+    useEffect(() => {
+        const type = searchParams.get("type");
+        if (type === "mini") {
+            setDefaultMessage("I'm interested in the TOAST Mini Package! 🥤");
+        }
+    }, [searchParams]);
+
     return (
         <section id="contact" className="py-32 relative">
             {/* Background Decoration */}
@@ -101,6 +114,8 @@ export default function Contact() {
                                 rows={4}
                                 className="peer w-full bg-transparent border-b border-white/20 py-4 text-white focus:outline-none focus:border-white transition-colors resize-none"
                                 placeholder=" "
+                                defaultValue={defaultMessage}
+                                key={defaultMessage} // Force re-render when message changes
                             />
                             <label
                                 htmlFor="message"
