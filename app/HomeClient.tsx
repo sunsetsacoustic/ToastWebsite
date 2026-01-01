@@ -6,7 +6,7 @@ import ToastCalculator from "@/components/ToastCalculator";
 import HowItWorks from "@/components/HowItWorks";
 import AboutUs from "@/components/AboutUs";
 import Services from "@/components/Services";
-import Footer from "@/components/Footer";
+
 import Contact from "@/components/Contact";
 
 export default function HomeClient() {
@@ -27,7 +27,6 @@ export default function HomeClient() {
                 <Services />
             </div>
             <Contact />
-            <Footer />
         </main>
     );
 }

@@ -23,6 +23,7 @@ export default function Footer() {
                         <a href="mailto:hello@toastmobile.bar" className="hover:text-white transition-colors">Email</a>
                         <a href="https://instagram.com/ToastMobileBar" target="_blank" className="hover:text-white transition-colors">Instagram</a>
                         <a href="https://www.christophertoddvisuals.com/photography" target="_blank" className="hover:text-white transition-colors">Photography</a>
+                        <Link href="/resources/alcohol-buying-guide" className="hover:text-white transition-colors">Buying Guide</Link>
                         <span className="w-1 h-1 bg-zinc-800 rounded-full" />
                         <span className="text-zinc-700">&copy; 2025</span>
                     </div>
