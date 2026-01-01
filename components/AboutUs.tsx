@@ -25,10 +25,10 @@ export default function AboutUs() {
 
                     <div className="space-y-6">
                         <p className="text-lg md:text-xl text-zinc-300 font-light leading-relaxed max-w-2xl mx-auto">
-                            Run by a husband and wife team in Texas. We combine tech-forward planning with old-school hospitality to ensure your event feels personal, professional, and effortless.
+                            Run by a husband and wife team in Texas. We combine tech-forward planning with old-school hospitality to ensure your <a href="/services" className="text-zinc-300 underline underline-offset-4 hover:text-white transition-colors">event</a> feels personal, professional, and effortless.
                         </p>
                         <p className="text-zinc-400 font-light leading-relaxed max-w-2xl mx-auto">
-                            We believe every pour tells a story. From the initial consultation to the final toast, we're dedicated to making your celebration unforgettable.
+                            We believe every pour tells a story. From the initial consultation to the final toast, we're dedicated to making your celebration unforgettable. <a href="/contact" className="text-zinc-400 underline underline-offset-4 hover:text-white transition-colors">Contact us</a> to start planning.
                         </p>
                     </div>
 

@@ -9,7 +9,7 @@ export default function Services() {
                 <div className="text-center mb-16">
                     <h2 className="text-4xl md:text-5xl font-display font-bold text-brand-cream mb-4">Our Services</h2>
                     <p className="text-white/60 max-w-2xl mx-auto font-light">
-                        Choose the package that fits your event. We keep it simple.
+                        Choose the package that fits your event. We keep it simple. Have questions? <a href="/contact" className="text-white/60 underline hover:text-white transition-colors">Ask us anything.</a>
                     </p>
                 </div>
 

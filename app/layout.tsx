@@ -3,6 +3,7 @@ import { Playfair_Display, Inter } from "next/font/google";
 import "./globals.css";
 import JsonLd from "@/components/JsonLd";
 import Footer from "@/components/Footer";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 
 const playfair = Playfair_Display({
   variable: "--font-playfair",
@@ -25,6 +26,15 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     siteName: "TOAST Mobile Bar Co.",
+    url: "https://toastmobile.bar",
+    images: [
+      {
+        url: "/images/toast_mini_hero_luxury.png",
+        width: 1200,
+        height: 630,
+        alt: "TOAST Mobile Bar Co. Luxury Setup",
+      },
+    ],
   },
 };
 
@@ -38,6 +48,7 @@ export default function RootLayout({
       <body
         className={`${playfair.variable} ${inter.variable} antialiased bg-background text-foreground`}
       >
+        <GoogleAnalytics />
         <JsonLd />
         {children}
         <Footer />
