@@ -3,7 +3,7 @@ import HomeClient from "./HomeClient";
 
 export const metadata: Metadata = {
   title: "TOAST Mobile Bar Co. | Luxury Wedding & Event Bartending",
-  description: "The premier dry hire mobile bar for weddings and events in [Your City]. TABC certified staff, signature craft cocktails, and a sleek midnight navy bar setup.",
+  description: "The premier dry hire mobile bar for weddings and events in Kingwood and surrounding area. TABC certified staff, signature craft cocktails, and a sleek midnight navy bar setup.",
   keywords: ["Mobile Bar Texas", "Wedding Bartender", "Dry Hire Bar", "Cocktail Catering", "Event Bartender", "Private Party Bar"],
 };
 

@@ -13,7 +13,7 @@ const JsonLd = () => {
             "addressRegion": "TX",
             "addressCountry": "US"
         },
-        "areaServed": ["Austin", "Round Rock", "Georgetown", "Dripping Springs"]
+        "areaServed": ["Kingwood", "Humble", "Atascocita", "Splendora", "New Caney", "Porter", "Houston"]
     };
 
     return (

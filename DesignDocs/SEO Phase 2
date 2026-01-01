@@ -1,0 +1,74 @@
+You are a Senior Next.js SEO Specialist. I have run a professional SEO audit on this project (`toast-mobile-bar`) and received several failing grades that need immediate remediation.
+
+Please execute the following 5 tasks to fix the "Thin Content", "Social", and "Identity" errors.
+
+### TASK 1: Fix "Identity Schema" & Canonical Tag (Critical)
+The audit flagged "No Organization or Person Schema identified" and "Missing Canonical Tag".
+- **Action:** In `app/layout.tsx`, update the `<head>` or existing Schema script.
+- **Inject this specific JSON-LD:**
+  ```json
+  {
+    "@context": "[https://schema.org](https://schema.org)",
+    "@type": "Organization",
+    "name": "TOAST Mobile Bar Co.",
+    "url": "[https://www.toastmobile.bar](https://www.toastmobile.bar)",
+    "logo": "[https://www.toastmobile.bar/logo.png](https://www.toastmobile.bar/logo.png)",
+    "sameAs": [
+      "[https://www.instagram.com/toastbar.houston/](https://www.instagram.com/toastbar.houston/)",
+      "[https://www.facebook.com/profile.php?id=61585955603748](https://www.facebook.com/profile.php?id=61585955603748)"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "[Your Phone Number]",
+      "contactType": "customer service",
+      "areaServed": "US",
+      "availableLanguage": "English"
+    }
+  }
+Action: In app/layout.tsx metadata, add the metadataBase and alternates (canonical) fields:
+
+TypeScript
+
+metadataBase: new URL('[https://www.toastmobile.bar](https://www.toastmobile.bar)'),
+alternates: {
+  canonical: '/',
+}
+TASK 2: Fix "Social Grade F"
+The audit failed to find social links.
+
+Action: Open components/Footer.tsx (or wherever the footer is located).
+
+Update Links: Replace any # placeholders with:
+
+Instagram: https://www.instagram.com/toastbar.houston/
+
+Facebook: https://www.facebook.com/profile.php?id=61585955603748
+
+Add 'SameAs' Meta: Ensure these links are visible to crawlers.
+
+TASK 3: Fix "Thin Content" (Word Count < 323)
+The audit flagged the homepage as "Thin Content". We need to add ~400 words of high-value text without cluttering the design.
+
+Action: Create a new component components/SEOContent.tsx.
+
+Content: Generate an "FAQ" section and a "Why Choose Dry Hire?" section.
+
+Keywords to include naturally: "Mobile Bartender Houston", "Wedding Bar Rental", "TABC Certified", "Dry Hire Service", "Cocktail Catering".
+
+Design: Use an "Accordion" or "Collapsible" style so it doesn't ruin the visual flow, but the text is readable in the DOM.
+
+Import: Add this component to app/page.tsx just above the Footer.
+
+TASK 4: Add Analytics
+The audit detected no analytics tool.
+
+Action: Install the Vercel Analytics package if not present (npm install @vercel/analytics).
+
+Implementation: In app/layout.tsx, import <Analytics /> from @vercel/analytics/react and place it inside the <body> tag.
+
+TASK 5: Keyword Consistency
+The audit noticed "menu" and "service" are missing from the Title tags.
+
+Action: Update the title in app/page.tsx metadata to: title: 'TOAST Mobile Bar Co. | Luxury Bar Menu & Wedding Services'
+
+
