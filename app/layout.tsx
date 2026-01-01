@@ -16,7 +16,10 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://toastmobile.bar"),
+  metadataBase: new URL("https://www.toastmobile.bar"),
+  alternates: {
+    canonical: "./",
+  },
   title: {
     default: "TOAST Mobile Bar Co. | Premier Dry Hire Bartending in Texas",
     template: "%s | TOAST Mobile Bar Co.",
