@@ -21,8 +21,8 @@ export const metadata: Metadata = {
     canonical: "./",
   },
   title: {
-    default: "TOAST Mobile Bar Co. | Premier Dry Hire Bartending in Texas",
-    template: "%s | TOAST Mobile Bar Co.",
+    default: "TOAST Mobile Bar | Kingwood's Dry Hire Service",
+    template: "%s | TOAST Mobile Bar",
   },
   description: "Luxury mobile bar and bartending service for weddings, corporate events, and parties. We bring the bar to you with custom cocktails and premium service.",
   openGraph: {

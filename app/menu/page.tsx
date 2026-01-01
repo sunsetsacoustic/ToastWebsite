@@ -4,7 +4,7 @@ import Footer from '@/components/Footer';
 import MenuPresenter from '@/components/MenuPresenter';
 
 export const metadata = {
-    title: 'Signature Cocktail Menu | TOAST Mobile Bar Co.',
+    title: 'Signature Cocktails & Menu | TOAST Mobile Bar',
     description: 'View our curated menu of craft cocktails, smoked old fashioneds, and seasonal drinks. The premier dry-hire bar service for Kingwood, Humble, and Atascocita.',
 };
 

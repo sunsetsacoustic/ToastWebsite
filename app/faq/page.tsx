@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import Navbar from "@/components/Navbar";
 
 export const metadata: Metadata = {
-    title: 'Frequently Asked Questions | TOAST Mobile Bar Co.',
+    title: 'FAQ | Mobile Bar Rental Kingwood & Humble',
     description: 'Answers to your questions about Texas dry hire laws, alcohol shopping lists, and mobile bar requirements for events in the Kingwood/Houston area.',
 };
 

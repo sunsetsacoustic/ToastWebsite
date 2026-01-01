@@ -266,6 +266,13 @@ export default function MiniClient() {
                 </div>
             </section>
 
+            {/* 6. EXTRA SEO CONTENT */}
+            <div className="bg-slate-900 py-12 text-center">
+                <p className="text-zinc-500 text-sm max-w-2xl mx-auto px-6">
+                    Looking for a kids' party rental in Kingwood? Our Dirty Soda Bar is perfect for birthdays in Humble, Atascocita, and Porter. We bring the fun to your driveway.
+                </p>
+            </div>
+
         </main>
     );
 }

@@ -75,7 +75,10 @@ function ContactForm() {
                 <div className="max-w-4xl mx-auto">
 
                     <div className="text-center mb-16 space-y-4">
-                        <h1 className="text-5xl md:text-7xl font-serif text-white">Contact Us</h1>
+                        <div className="sr-only">
+                            <h1>Get in Touch</h1>
+                        </div>
+                        <h2 className="text-5xl md:text-7xl font-serif text-white">Contact Us</h2>
                         <p className="text-zinc-400 text-lg font-light max-w-xl mx-auto">
                             Let's make your event unforgettable. Fill out the details below and we'll get back to you within 24 hours.
                         </p>
@@ -97,7 +100,7 @@ function ContactForm() {
 
                         <div className="mb-12 text-center md:text-left">
                             <p className="text-zinc-300 text-sm md:text-base leading-relaxed hidden md:block">
-                                Secure your date with Kingwood's favorite dry hire bartending service. We proudly serve Kingwood, Atascocita, Humble, Porter, and New Caney. Whether it's a backyard wedding or a corporate happy hour, we handle the bar so you can handle the party.
+                                Proudly serving the Lake Houston area. Whether you are in Kingwood (77339/77345), Atascocita, or New Caney, TOAST brings the luxury bar experience to you.
                             </p>
                         </div>
 
