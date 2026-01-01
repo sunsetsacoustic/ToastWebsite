@@ -1,0 +1,42 @@
+You are a Senior Next.js Developer. I need you to implement a new "Frequently Asked Questions" page for this project (`toast-mobile-bar`) to improve SEO and user experience.
+
+Please perform the following 2 tasks:
+
+### TASK 1: Create the FAQ Page
+Create a new file `app/faq/page.tsx`.
+- **Design:** Use the project's "Midnight Navy" theme (Background: `#001F3F`, Text: White).
+- **Layout:** Use a clean, single-column layout with a expanding "Accordion" style list for the questions.
+- **Functionality:** Use the native `<details>` and `<summary>` HTML tags for the accordion (no external libraries).
+- **SEO:** Inject a `application/ld+json` script tag with `FAQPage` schema so Google can read the questions.
+- **Content:** Use this exact data for the page:
+  ```typescript
+  const faqs = [
+    {
+      question: "What exactly is a 'Dry Hire' bar?",
+      answer: "Great question! 'Dry Hire' means that you provide the alcohol, and we provide everything else. Due to Texas TABC liquor laws, mobile bars cannot legally sell alcohol. This actually benefits you—it saves you the huge markup venues charge for liquor. You buy the bottles at retail price (from Specs, Total Wine, etc.), and we turn them into a luxury experience."
+    },
+    {
+      question: "Do you help us decide how much to buy?",
+      answer: "Absolutely. We don't leave you guessing. Once you book, we provide a detailed **Custom Shopping List** based on your guest count and menu choices. We calculate exactly how many bottles of vodka, tequila, and wine you need so you don't run out or overspend."
+    },
+    {
+      question: "How much space does the mobile bar need?",
+      answer: "Our standard bar setup requires a **6x4 foot footprint**. We need flat ground (no steep hills!) and access to a standard 120V outlet if you want the bar lights or coffee service. If your venue is remote, we can bring a whisper-quiet generator for a small fee."
+    },
+    {
+      question: "Can you do both 'Dirty Sodas' and Cocktails?",
+      answer: "Yes! This is our most popular 'Hybrid' package. We can set up a **TOAST Mini** station for the kids (or non-drinkers) with Dirty Sodas and Mocktails, while running a full bar for the adults. It keeps everyone happy and hydrated."
+    },
+    {
+      question: "Do you carry General Liability & Liquor Liability Insurance?",
+      answer: "Yes, we carry a $1M General Liability policy and Liquor Liability insurance. We can provide a COI (Certificate of Insurance) to your venue upon request."
+    },
+    {
+      question: "What is your travel radius?",
+      answer: "We are based in [Your City] and the first **20 miles are free**. Beyond that, we charge a modest travel fee ($2/mile) to cover gas and crew time. We regularly serve Austin, Round Rock, Dripping Springs, and the surrounding Hill Country."
+    },
+    {
+      question: "How do I book my date?",
+      answer: "A **50% non-refundable deposit** locks in your date. The remaining balance is due 14 days before your event. Dates fill up fast (especially Saturdays), so we recommend booking as soon as you have your venue secured."
+    }
+  ];

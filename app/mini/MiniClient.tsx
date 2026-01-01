@@ -5,7 +5,7 @@ import Link from "next/link";
 import { Check } from "lucide-react";
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+
 
 export default function MiniClient() {
     return (
@@ -201,7 +201,7 @@ export default function MiniClient() {
                         className="border border-white/10 bg-white/[0.02] backdrop-blur-xl p-12 md:p-16 text-center relative"
                     >
                         <h2 className="text-2xl font-light tracking-[0.2em] text-white mb-6 uppercase">The Mini Package</h2>
-                        <div className="text-4xl md:text-5xl font-light text-slate-300 mb-10 tracking-widest">$500 FLAT</div>
+                        <div className="text-4xl md:text-5xl font-light text-slate-300 mb-10 tracking-widest">$350+</div>
 
                         <ul className="space-y-6 text-left max-w-xs mx-auto mb-12">
                             {[
@@ -234,7 +234,7 @@ export default function MiniClient() {
                 </div>
             </section>
 
-            <Footer />
+
         </main>
     );
 }
