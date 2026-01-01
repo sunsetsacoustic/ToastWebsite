@@ -15,7 +15,7 @@ const MenuPresenter: React.FC = () => {
         <div className="w-full max-w-7xl mx-auto px-6 py-16 md:py-24 animate-in fade-in duration-700">
             {/* Header */}
             <div className="text-center mb-20">
-                <h2 className="text-3xl md:text-4xl font-display text-brand-primary tracking-wide mb-4">Curated Selections</h2>
+                <h1 className="text-3xl md:text-4xl font-display text-brand-primary tracking-wide mb-4">Curated Selections</h1>
                 <p className="text-brand-secondary/80 font-light max-w-lg mx-auto">
                     Handcrafted cocktails designed to elevate your celebration. Experience the taste of Texas luxury.
                 </p>

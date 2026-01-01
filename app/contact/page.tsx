@@ -95,6 +95,12 @@ function ContactForm() {
                             </div>
                         )}
 
+                        <div className="mb-12 text-center md:text-left">
+                            <p className="text-zinc-300 text-sm md:text-base leading-relaxed hidden md:block">
+                                Secure your date with Kingwood's favorite dry hire bartending service. We proudly serve Kingwood, Atascocita, Humble, Porter, and New Caney. Whether it's a backyard wedding or a corporate happy hour, we handle the bar so you can handle the party.
+                            </p>
+                        </div>
+
                         <form onSubmit={handleSubmit} className="space-y-12">
                             <div className="grid md:grid-cols-2 gap-12">
                                 <div className="relative group">
@@ -191,6 +197,11 @@ function ContactForm() {
             <Footer />
         </main>
     );
+}
+
+export const metadata = {
+    title: 'Contact Us | Book Your Mobile Bar in Kingwood',
+    description: 'Ready to book TOAST Mobile Bar? Check availability for your wedding, corporate event, or private party in Kingwood, Humble, and the Greater Houston area.',
 }
 
 export default function ContactPage() {

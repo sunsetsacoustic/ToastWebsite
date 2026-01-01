@@ -235,6 +235,37 @@ export default function MiniClient() {
             </section>
 
 
+            {/* 5. LOCAL SEO SECTION */}
+            <section className="py-24 relative z-10 bg-slate-900/50">
+                <div className="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h2 className="text-3xl md:text-5xl font-light tracking-[0.1em] text-white mb-6 uppercase">
+                            Kingwood's Ultimate <br /> <span className="text-blue-300 font-serif italic capitalize">Kids Party Upgrade</span>
+                        </h2>
+                        <div className="space-y-6 text-gray-400 font-light text-lg leading-relaxed">
+                            <p>
+                                Perfect for <strong className="text-white font-medium">Kingwood birthday parties and Sweet 16s</strong>, TOAST Mini brings a unique, Instagram-worthy experience to your driveway or backyard.
+                            </p>
+                            <p>
+                                We offer premium non-alcoholic options for events in <strong className="text-white font-medium">Humble, Atascocita, and Porter</strong>. From our signature "Dirty Sodas" to handcrafted mocktails, we ensure every guest feels like a VIP.
+                            </p>
+                            <p>
+                                Looking for <strong className="text-white font-medium">Kids Party Rentals in 77339</strong>? Stop searching and start sipping. Our mobile soda bar is fully improved and self-contained, meaning no measuring, no pouring, and absolutely no cleanup for you.
+                            </p>
+                        </div>
+                    </div>
+                    <div className="relative h-[400px] w-full rounded-sm overflow-hidden border border-white/10 shadow-2xl">
+                        {/* Placeholder for a party image, reusing hero for now or generic party vibe */}
+                        <Image
+                            src="/images/toast_mini_pouring_luxury.png"
+                            alt="Dirty Soda Bar Kingwood - Kids Party Rental"
+                            fill
+                            className="object-cover opacity-80"
+                        />
+                    </div>
+                </div>
+            </section>
+
         </main>
     );
 }
