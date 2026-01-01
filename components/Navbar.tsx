@@ -24,6 +24,7 @@ export default function Navbar() {
         { name: "Services", href: "/#services" },
         { name: "Menu", href: "/menu" },
         { name: "Toast Mini", href: "/mini" },
+        { name: "FAQ", href: "/faq" },
         { name: "Contact", href: "/#contact" },
     ];
 

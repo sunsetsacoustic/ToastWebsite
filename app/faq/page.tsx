@@ -29,11 +29,11 @@ export default function FAQPage() {
         },
         {
             question: "What is your travel radius?",
-            answer: "We are based in Kingwood and the first **20 miles are free**. Beyond that, we charge a modest travel fee ($2/mile) to cover gas and crew time. We regularly serve Austin, Round Rock, Dripping Springs, and the surrounding Hill Country."
+            answer: "We are based in Kingwood and the first **20 miles are free**. Beyond that, we charge a modest travel fee ($1/mile) to cover gas and crew time."
         },
         {
             question: "How do I book my date?",
-            answer: "A **50% non-refundable deposit** locks in your date. The remaining balance is due 14 days before your event. Dates fill up fast (especially Saturdays), so we recommend booking as soon as you have your venue secured."
+            answer: "A **35% non-refundable deposit** locks in your date. The remaining balance is due 10 days before your event. Dates fill up fast (especially Saturdays), so we recommend booking as soon as you have your venue secured."
         }
     ];
 
@@ -51,33 +51,33 @@ export default function FAQPage() {
     };
 
     return (
-        <div className="min-h-screen bg-[#001F3F] text-white py-20 px-4 md:px-8">
+        <div className="min-h-screen py-20 px-4 md:px-8 bg-gradient-to-b from-brand-dark to-black">
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
             />
             <div className="max-w-3xl mx-auto space-y-12">
                 <header className="text-center space-y-4">
-                    <h1 className="text-4xl md:text-5xl font-serif text-amber-50">Frequently Asked Questions</h1>
-                    <p className="text-blue-200 text-lg">Everything you need to know about booking TOAST.</p>
+                    <h1 className="text-4xl md:text-5xl font-serif text-white">Frequently Asked Questions</h1>
+                    <p className="text-zinc-400 text-lg">Everything you need to know about booking TOAST.</p>
                 </header>
 
                 <div className="space-y-4">
                     {faqs.map((faq, index) => (
                         <details
                             key={index}
-                            className="group bg-[#0a2a4d] rounded-lg border border-white/10 open:bg-[#0f355c] transition-colors duration-200"
+                            className="group bg-white/5 rounded-lg border border-white/5 open:bg-white/10 transition-colors duration-200"
                         >
                             <summary className="flex items-center justify-between p-6 cursor-pointer list-none">
-                                <h3 className="text-lg font-medium text-amber-50 pr-4">{faq.question}</h3>
-                                <span className="text-amber-200 transition-transform duration-300 group-open:rotate-180">
+                                <h3 className="text-lg font-medium text-white pr-4">{faq.question}</h3>
+                                <span className="text-brand-primary transition-transform duration-300 group-open:rotate-180">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                                         <polyline points="6 9 12 15 18 9"></polyline>
                                     </svg>
                                 </span>
                             </summary>
-                            <div className="px-6 pb-6 text-blue-100 leading-relaxed space-y-2">
-                                <div dangerouslySetInnerHTML={{ __html: faq.answer.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') }} />
+                            <div className="px-6 pb-6 text-zinc-300 leading-relaxed space-y-2">
+                                <div dangerouslySetInnerHTML={{ __html: faq.answer.replace(/\*\*(.*?)\*\*/g, '<strong class="text-white">$1</strong>') }} />
                             </div>
                         </details>
                     ))}
