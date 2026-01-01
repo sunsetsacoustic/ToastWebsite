@@ -1,33 +1,12 @@
-"use client";
+import type { Metadata } from "next";
+import HomeClient from "./HomeClient";
 
-import Navbar from "@/components/Navbar";
-import Hero from "@/components/Hero";
-import ToastCalculator from "@/components/ToastCalculator";
-import HowItWorks from "@/components/HowItWorks";
-import AboutUs from "@/components/AboutUs";
-import Services from "@/components/Services";
-import Footer from "@/components/Footer";
-import Contact from "@/components/Contact";
+export const metadata: Metadata = {
+  title: "TOAST Mobile Bar Co. | Luxury Wedding & Event Bartending",
+  description: "The premier dry hire mobile bar for weddings and events in [Your City]. TABC certified staff, signature craft cocktails, and a sleek midnight navy bar setup.",
+  keywords: ["Mobile Bar Texas", "Wedding Bartender", "Dry Hire Bar", "Cocktail Catering", "Event Bartender", "Private Party Bar"],
+};
 
 export default function Home() {
-  return (
-    <main className="min-h-screen bg-brand-dark text-white selection:bg-brand-gold selection:text-brand-dark">
-      <Navbar />
-      <Hero />
-      <div id="calculator" className="py-20 relative z-10">
-        <ToastCalculator />
-      </div>
-      <div id="how-it-works">
-        <HowItWorks />
-      </div>
-      <div id="about">
-        <AboutUs />
-      </div>
-      <div id="services">
-        <Services />
-      </div>
-      <Contact />
-      <Footer />
-    </main>
-  );
+  return <HomeClient />;
 }

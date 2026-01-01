@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Playfair_Display, Inter } from "next/font/google";
 import "./globals.css";
+import JsonLd from "@/components/JsonLd";
 
 const playfair = Playfair_Display({
   variable: "--font-playfair",
@@ -13,8 +14,17 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Toast Mobile Bar | Texas' Premier Dry Hire Service",
-  description: "Raise a glass. We'll handle the rest. Premium dry-hire mobile bar service in Texas.",
+  metadataBase: new URL("https://toastmobile.bar"),
+  title: {
+    default: "TOAST Mobile Bar Co. | Premier Dry Hire Bartending in Texas",
+    template: "%s | TOAST Mobile Bar Co.",
+  },
+  description: "Luxury mobile bar and bartending service for weddings, corporate events, and parties. We bring the bar to you with custom cocktails and premium service.",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    siteName: "TOAST Mobile Bar Co.",
+  },
 };
 
 export default function RootLayout({
@@ -27,6 +37,7 @@ export default function RootLayout({
       <body
         className={`${playfair.variable} ${inter.variable} antialiased bg-background text-foreground`}
       >
+        <JsonLd />
         {children}
       </body>
     </html>

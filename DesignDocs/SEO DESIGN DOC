@@ -1,0 +1,51 @@
+You are a Senior Next.js SEO Expert. I need you to overhaul the SEO for this project (`toast-mobile-bar`) to rank for high-value local keywords in the Wedding and Kids' Party markets.
+
+Please perform the following 5 tasks. If a file does not exist, create it.
+
+### TASK 1: Update Root Metadata (Global)
+In `app/layout.tsx`, update the `metadata` object to include default OpenGraph images and global settings.
+- **Title Template:** `%s | TOAST Mobile Bar Co.`
+- **Default Title:** `TOAST Mobile Bar Co. | Premier Dry Hire Bartending in Texas`
+- **Description:** `Luxury mobile bar and bartending service for weddings, corporate events, and parties. We bring the bar to you with custom cocktails and premium service.`
+- **Base URL:** Use `https://toastmobile.bar`
+- **OpenGraph:** Set type to 'website', locale to 'en_US', and siteName to 'TOAST Mobile Bar Co.'
+
+### TASK 2: Page-Specific Metadata
+Update the `metadata` export in the following files with targeted keywords:
+
+**File: `app/page.tsx` (Home)**
+- **Title:** `TOAST Mobile Bar Co. | Luxury Wedding & Event Bartending`
+- **Description:** `The premier dry hire mobile bar for weddings and events in [Your City]. TABC certified staff, signature craft cocktails, and a sleek midnight navy bar setup.`
+- **Keywords:** `['Mobile Bar Texas', 'Wedding Bartender', 'Dry Hire Bar', 'Cocktail Catering', 'Event Bartender', 'Private Party Bar']`
+
+**File: `app/mini/page.tsx` (Kids/Mini)**
+- **Title:** `TOAST Mini | Dirty Soda & Mocktail Bar for Kids Parties`
+- **Description:** `The coolest bar in town. Mobile Dirty Soda and Mocktail bar rental for kids birthday parties, sweet 16s, and alcohol-free events.`
+- **Keywords:** `['Dirty Soda Bar', 'Kids Party Rental', 'Mocktail Bar', 'Mobile Soda Bar', 'Birthday Party Ideas', 'Italian Soda Bar']`
+
+### TASK 3: Inject Local Business Schema (JSON-LD)
+Create a new component `components/JsonLd.tsx`.
+- It should render a `<script type="application/ld+json">` tag.
+- The content should be a `MobileFoodService` schema.
+- **Name:** "TOAST Mobile Bar Co."
+- **Image:** "https://toastmobile.bar/logo.png" (or relevant image path)
+- **PriceRange:** "$$$"
+- **Telephone:** "[Your Phone Number]"
+- **Address:** Region: "TX", AddressCountry: "US"
+- **AreaServed:** Array of strings: ["Austin", "Round Rock", "Georgetown", "Dripping Springs"] (Add generic placeholders if needed).
+- **Import and use this component** inside the `<body>` of `app/layout.tsx`.
+
+### TASK 4: Generate Technical SEO Files
+1. **Create `app/sitemap.ts`:**
+   - Should return URLs for `/`, `/mini`, `/calculator`, `/contact`, and `/services`.
+   - Set `lastModified` to new Date().
+   - Set priority: 1.0 for home, 0.9 for services/mini.
+2. **Create `app/robots.ts`:**
+   - Allow all (`/`).
+   - Point to the sitemap (`https://toastmobile.bar/sitemap.xml`).
+
+### TASK 5: Image Optimization Audit
+Scan `app/page.tsx` and `app/mini/page.tsx`.
+- Ensure every `<Image />` component has a descriptive `alt` attribute.
+- **Rule:** If an image is the "Bluebonnet" or "Wave" logo, alt should be "TOAST Mobile Bar Co. Logo".
+- **Rule:** If an image is a drink, the alt should include keywords like "Craft Cocktail" or "Dirty Soda".
